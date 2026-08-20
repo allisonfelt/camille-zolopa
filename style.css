@@ -426,6 +426,69 @@ a:hover { color: var(--accent-soft); }
   margin-top: 0.45rem;
 }
 
+/* Photographs in the flow of the page */
+
+.photo {
+  margin: 0 0 1.5rem;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+}
+
+.photo figcaption {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  margin-top: 0.5rem;
+}
+
+.photo-wide { max-width: 22rem; margin: 0; }
+
+.photo-inline {
+  max-width: 15rem;
+  margin: 0 0 1.75rem;
+}
+
+.photo-right {
+  float: right;
+  max-width: 12rem;
+  margin: 0.25rem 0 1.25rem 2rem;
+}
+
+.intro-with-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.intro-with-photo .section-intro { margin-bottom: 0; }
+
+/* Two small photos side by side in the rail */
+
+.rail-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+.rail-photos .rail-photo { max-width: none; margin: 0; }
+
+.rail-photos .rail-photo img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.rail-photos figcaption { margin-top: 0.35rem; }
+
 /* Aside — light personal note */
 
 .aside {
@@ -753,6 +816,9 @@ a:hover { color: var(--accent-soft); }
   .tablist { gap: 0; }
   .prose-block { padding-left: 1rem; }
   .about-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .intro-with-photo { grid-template-columns: 1fr; gap: 1.25rem; }
+  .photo-wide { max-width: none; }
+  .photo-right { float: none; max-width: 10rem; margin: 0 0 1.25rem; }
   .year-group {
     grid-template-columns: 1fr;
     gap: 0.5rem;
