@@ -214,6 +214,14 @@ body:not(.has-tabs) .tabbar { display: none; }
   border-radius: 3px;
 }
 
+.card-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  color: var(--accent-soft);
+  margin-bottom: 0.7rem;
+}
+
 .card h4 {
   font-family: var(--sans);
   font-size: 0.875rem;
