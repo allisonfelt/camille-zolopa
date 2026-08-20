@@ -211,6 +211,33 @@ body:not(.has-tabs) .tabbar { display: none; }
 
 /* Hero */
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 17rem;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Until a portrait is added the text simply spans the full width. */
+.hero-grid:not(:has(.hero-portrait)) { grid-template-columns: 1fr; }
+
+.hero-portrait {
+  margin: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--paper-alt);
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: saturate(0.92);
+}
+
 .hero {
   padding-top: 5.5rem;
   padding-bottom: 3.5rem;
@@ -594,6 +621,8 @@ a:hover { color: var(--accent-soft); }
 
 @media (max-width: 40rem) {
   .hero { padding-top: 2rem; padding-bottom: 2rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .hero-portrait { max-width: 12rem; }
   .hero-summary { font-size: 1.0625rem; margin-bottom: 1.5rem; }
   .facts {
     grid-template-columns: 1fr 1fr;
