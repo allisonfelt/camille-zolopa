@@ -367,6 +367,26 @@ p { max-width: var(--measure); }
 a { color: var(--accent); }
 a:hover { color: var(--accent-soft); }
 
+/* Photo in the About rail */
+
+.rail-photo {
+  margin: 0 0 0.9rem;
+}
+
+.rail-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.rail-photo figcaption {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  margin-top: 0.45rem;
+}
+
 /* Aside — light personal note */
 
 .aside {
