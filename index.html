@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="style.css?v=202608200325">
+<link rel="stylesheet" href="style.css?v=202608200329">
 </head>
 <body>
 
@@ -513,16 +513,20 @@
   </div>
 
   <div class="tab-panel" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact" tabindex="0">
-    <section class="section wrap">
+    <section class="section wrap cv-cta" id="cv">
     <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18H6z"/><path d="M9.5 8h5M9.5 12h5M9.5 16h3"/></svg><span>Curriculum Vitae</span></h2>
     <p>For a full record of publications, presentations, training, and service, see the complete CV.</p>
-    <!--
-      To enable this link, add a web-safe PDF named Camille_Zolopa_CV.pdf to the
-      repository root, then delete this comment and uncomment the button below.
-      Strip phone numbers and any other private contact details from that copy
-      first — anything in this file is publicly downloadable.
-    -->
-    <!-- <div><a class="btn" href="Camille_Zolopa_CV.pdf">Download CV (PDF)</a></div> -->
+    <div class="cv-actions">
+      <a class="btn btn-icon" href="Camille_Zolopa_CV.pdf" download="Camille_Zolopa_CV.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
+        Download CV (PDF)
+      </a>
+      <a class="btn btn-outline btn-icon" href="Camille_Zolopa_CV.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/></svg>
+        View in browser
+      </a>
+    </div>
+    <p class="cv-note">7 pages &middot; PDF &middot; updated August 2026</p>
     </section>
     <section class="section wrap">
     <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg><span>Contact</span></h2>
