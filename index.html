@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -65,13 +67,13 @@
 
   <div class="tabbar">
     <div class="wrap tablist" role="tablist" aria-label="Sections">
-      <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true" tabindex="0" data-slug="about">About</button>
-      <button class="tab" role="tab" id="tab-research" aria-controls="panel-research" aria-selected="false" tabindex="-1" data-slug="research">Research</button>
-      <button class="tab" role="tab" id="tab-publications" aria-controls="panel-publications" aria-selected="false" tabindex="-1" data-slug="publications">Publications</button>
-      <button class="tab" role="tab" id="tab-presentations" aria-controls="panel-presentations" aria-selected="false" tabindex="-1" data-slug="presentations">Presentations</button>
-      <button class="tab" role="tab" id="tab-clinical" aria-controls="panel-clinical" aria-selected="false" tabindex="-1" data-slug="clinical">Clinical</button>
-      <button class="tab" role="tab" id="tab-service" aria-controls="panel-service" aria-selected="false" tabindex="-1" data-slug="service">Service</button>
-      <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1" data-slug="contact">Contact</button>
+      <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true" tabindex="0" data-slug="about"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span>About</span></button>
+      <button class="tab" role="tab" id="tab-research" aria-controls="panel-research" aria-selected="false" tabindex="-1" data-slug="research"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg><span>Research</span></button>
+      <button class="tab" role="tab" id="tab-publications" aria-controls="panel-publications" aria-selected="false" tabindex="-1" data-slug="publications"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h7M9 16h7"/></svg><span>Publications</span></button>
+      <button class="tab" role="tab" id="tab-presentations" aria-controls="panel-presentations" aria-selected="false" tabindex="-1" data-slug="presentations"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18v11H3z"/><path d="M12 15v5"/><path d="M8 20h8"/></svg><span>Presentations</span></button>
+      <button class="tab" role="tab" id="tab-clinical" aria-controls="panel-clinical" aria-selected="false" tabindex="-1" data-slug="clinical"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.3A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.7C19 15.6 12 20 12 20Z"/></svg><span>Clinical</span></button>
+      <button class="tab" role="tab" id="tab-service" aria-controls="panel-service" aria-selected="false" tabindex="-1" data-slug="service"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="2.8"/><circle cx="16.5" cy="10.5" r="2.3"/><path d="M2.5 19a5.8 5.8 0 0 1 11 0"/><path d="M15 15.4a5 5 0 0 1 6.5 3.6"/></svg><span>Service</span></button>
+      <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1" data-slug="contact"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg><span>Contact</span></button>
     </div>
   </div>
   <div class="tab-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about" tabindex="0">
@@ -215,7 +217,7 @@
     </section>
   </div>
 
-  <div class="tab-panel" role="tabpanel" id="panel-research" aria-labelledby="tab-research" tabindex="0" hidden>
+  <div class="tab-panel" role="tabpanel" id="panel-research" aria-labelledby="tab-research" tabindex="0">
     <section class="section wrap">
     <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg><span>Research</span></h2>
     <p class="lead">
@@ -291,7 +293,7 @@
     </section>
   </div>
 
-  <div class="tab-panel" role="tabpanel" id="panel-publications" aria-labelledby="tab-publications" tabindex="0" hidden>
+  <div class="tab-panel" role="tabpanel" id="panel-publications" aria-labelledby="tab-publications" tabindex="0">
     <section class="section wrap">
     <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h7M9 16h7"/></svg><span>Publications</span></h2>
 
@@ -319,7 +321,7 @@
     </section>
   </div>
 
-  <div class="tab-panel" role="tabpanel" id="panel-presentations" aria-labelledby="tab-presentations" tabindex="0" hidden>
+  <div class="tab-panel" role="tabpanel" id="panel-presentations" aria-labelledby="tab-presentations" tabindex="0">
     <section class="section wrap">
     <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18v11H3z"/><path d="M12 15v5"/><path d="M8 20h8"/></svg><span>Presentations</span></h2>
 
@@ -346,7 +348,7 @@
     </section>
   </div>
 
-  <div class="tab-panel" role="tabpanel" id="panel-clinical" aria-labelledby="tab-clinical" tabindex="0" hidden>
+  <div class="tab-panel" role="tabpanel" id="panel-clinical" aria-labelledby="tab-clinical" tabindex="0">
     <section class="section wrap">
     <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.3A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.7C19 15.6 12 20 12 20Z"/></svg><span>Clinical Experience</span></h2>
     <p class="lead">
@@ -386,7 +388,7 @@
     </section>
   </div>
 
-  <div class="tab-panel" role="tabpanel" id="panel-service" aria-labelledby="tab-service" tabindex="0" hidden>
+  <div class="tab-panel" role="tabpanel" id="panel-service" aria-labelledby="tab-service" tabindex="0">
     <section class="section wrap">
     <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="2.8"/><circle cx="16.5" cy="10.5" r="2.3"/><path d="M2.5 19a5.8 5.8 0 0 1 11 0"/><path d="M15 15.4a5 5 0 0 1 6.5 3.6"/></svg><span>Service &amp; Community</span></h2>
     <div class="grid-2">
@@ -413,7 +415,7 @@
     </section>
   </div>
 
-  <div class="tab-panel" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact" tabindex="0" hidden>
+  <div class="tab-panel" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact" tabindex="0">
     <section class="section wrap">
     <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18H6z"/><path d="M9.5 8h5M9.5 12h5M9.5 16h3"/></svg><span>Curriculum Vitae</span></h2>
     <p>For a full record of publications, presentations, training, and service, see the complete CV.</p>
@@ -449,7 +451,8 @@
     var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
     if (!tabs.length) return;
 
-    // Panels are visible by default so the page still works without JS.
+    // Panels start visible so the page still reads without JS; now that the
+    // script is running, collapse to the selected one.
     document.body.classList.add('has-tabs');
 
     function show(slug, focusTab) {
@@ -494,6 +497,88 @@
     var initial = location.hash.replace('#', '');
     if (initial && document.getElementById('panel-' + initial)) show(initial);
     else show(tabs[0].dataset.slug);
+  })();
+
+  // Parallax: the portrait and a few hero elements drift at their own pace as
+  // the page scrolls. Skipped entirely for reduced-motion and narrow screens.
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var narrow = window.matchMedia('(max-width: 40rem)');
+    var layers = [
+      { el: document.querySelector('.hero-portrait'), rate: -0.16, scale: 0.00004 },
+      { el: document.querySelector('.hero-text'),     rate: 0.055 },
+      { el: document.querySelector('.facts'),         rate: 0.03 }
+    ].filter(function (l) { return l.el; });
+    if (!layers.length) return;
+
+    var ticking = false;
+
+    function frame() {
+      var y = window.scrollY || 0;
+      layers.forEach(function (l) {
+        var shift = y * l.rate;
+        var scale = l.scale ? 1 + y * l.scale : 1;
+        l.el.style.transform = 'translate3d(0,' + shift.toFixed(2) + 'px,0) scale(' + scale.toFixed(4) + ')';
+      });
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(frame);
+    }
+
+    function reset() {
+      layers.forEach(function (l) { l.el.style.transform = ''; });
+    }
+
+    function sync() {
+      window.removeEventListener('scroll', onScroll);
+      if (reduce.matches || narrow.matches) { reset(); return; }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      frame();
+    }
+
+    sync();
+    reduce.addEventListener('change', sync);
+    narrow.addEventListener('change', sync);
+  })();
+
+  // Reveal blocks as they scroll into view. Everything stays visible if this
+  // never runs, and the stylesheet skips it under prefers-reduced-motion.
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    document.body.classList.add('js-motion');
+
+    var targets = document.querySelectorAll(
+      '.prose-block, .card, .panel, .timeline > li, .pub-list > li, h2, .lead'
+    );
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+
+    targets.forEach(function (el, i) {
+      el.classList.add('reveal');
+      el.style.transitionDelay = Math.min(i % 8, 6) * 45 + 'ms';
+      io.observe(el);
+    });
+
+    // Panels that start hidden reveal when their tab is opened.
+    document.querySelectorAll('.tab').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var panel = document.getElementById('panel-' + tab.dataset.slug);
+        if (!panel) return;
+        panel.querySelectorAll('.reveal').forEach(function (el) {
+          el.classList.add('is-in');
+        });
+      });
+    });
   })();
 </script>
 

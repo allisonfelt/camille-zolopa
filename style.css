@@ -7,6 +7,7 @@
   --paper-alt: #f4f2ec;
   --accent: #6a2c2c;
   --accent-soft: #8d4a4a;
+  --accent-wash: #e8ddd6;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --display: Fraunces, "Source Serif 4", Georgia, serif;
   --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -76,42 +77,63 @@ body {
   z-index: 9;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
-  background: var(--paper-alt);
+  background: rgba(251, 250, 247, 0.88);
+  backdrop-filter: blur(10px);
   margin-bottom: 2.5rem;
 }
 
 .tablist {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: 0.2rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
 }
 
 .tab {
   appearance: none;
-  border: 0;
-  background: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-family: var(--sans);
-  font-size: 0.8125rem;
+  font-size: 0.78125rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  padding: 0.95rem 1rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.5rem 0.8rem;
+  white-space: nowrap;
 }
 
-.tab:hover { color: var(--accent); }
+.tab-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: none;
+  opacity: 0.75;
+}
+
+.tab:hover {
+  color: var(--accent);
+  background: rgba(106, 44, 44, 0.06);
+  border-color: rgba(106, 44, 44, 0.14);
+}
 
 .tab[aria-selected="true"] {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(106, 44, 44, 0.22);
 }
+
+.tab[aria-selected="true"] .tab-icon { opacity: 1; }
 
 .tab:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: -3px;
+  outline-offset: 2px;
 }
 
 /* Without JS every panel stays visible, so the page degrades to one long read. */
@@ -212,6 +234,8 @@ body:not(.has-tabs) .tabbar { display: none; }
 /* Hero */
 
 .hero-grid {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 17rem;
   gap: 3.5rem;
@@ -222,10 +246,24 @@ body:not(.has-tabs) .tabbar { display: none; }
 .hero-grid:not(:has(.hero-portrait)) { grid-template-columns: 1fr; }
 
 .hero-portrait {
+  position: relative;
   margin: 0;
-  border-radius: 3px;
-  overflow: hidden;
-  background: var(--paper-alt);
+  will-change: transform;
+  padding: 0.65rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(28, 28, 26, 0.04), 0 8px 24px rgba(28, 28, 26, 0.06);
+}
+
+/* Offset block of colour behind the frame */
+.hero-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 1.1rem -1.1rem -1.1rem 1.1rem;
+  background: var(--accent-wash);
+  border-radius: 4px;
+  z-index: -1;
 }
 
 .hero-portrait img {
@@ -234,8 +272,10 @@ body:not(.has-tabs) .tabbar { display: none; }
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 20%;
-  filter: saturate(0.92);
+  object-position: center 18%;
+  border-radius: 2px;
+  /* Warm the cool grey backdrop so it sits with the paper */
+  filter: sepia(0.16) saturate(0.94) contrast(1.02) brightness(1.01);
 }
 
 .hero {
@@ -378,6 +418,7 @@ a:hover { color: var(--accent-soft); }
   width: 100%;
   height: auto;
   border-radius: 3px;
+  filter: sepia(0.14) saturate(0.96) contrast(1.02);
 }
 
 .rail-photo figcaption {
@@ -655,7 +696,8 @@ a:hover { color: var(--accent-soft); }
   .prose-block { padding-left: 1rem; }
   .about-layout { grid-template-columns: 1fr; gap: 2rem; }
   .about-rail { position: static; margin-top: 0.5rem; }
-  .tab { padding: 0.8rem 0.7rem; font-size: 0.75rem; }
+  .tab { padding: 0.45rem 0.7rem; font-size: 0.6875rem; gap: 0.35rem; }
+  .tab-icon { width: 0.85rem; height: 0.85rem; }
   .timeline > li {
     grid-template-columns: 1fr;
     gap: 0.4rem;
@@ -681,4 +723,97 @@ a:hover { color: var(--accent-soft); }
   .site-header, .tabbar, .hero-links { display: none; }
   .tab-panel[hidden] { display: block !important; }
   body { background: #fff; font-size: 11pt; }
+}
+
+
+/* ---------------------------------------------------------------
+   Motion
+   Entrances are opt-in via .reveal, applied by script so the page
+   still shows everything when JavaScript is unavailable. Everything
+   here is disabled under prefers-reduced-motion.
+   --------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .js-motion .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  .js-motion .reveal.is-in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
+                transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  /* Hero pieces rise in sequence on first paint */
+  .js-motion .hero-text > *,
+  .js-motion .hero-portrait,
+  .js-motion .facts > * {
+    animation: rise 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) backwards;
+  }
+
+  .js-motion .hero-text > *:nth-child(1) { animation-delay: 0.05s; }
+  .js-motion .hero-text > *:nth-child(2) { animation-delay: 0.12s; }
+  .js-motion .hero-text > *:nth-child(3) { animation-delay: 0.19s; }
+  .js-motion .hero-text > *:nth-child(4) { animation-delay: 0.26s; }
+  .js-motion .hero-text > *:nth-child(5) { animation-delay: 0.33s; }
+  .js-motion .hero-portrait { animation-delay: 0.18s; }
+  .js-motion .facts > *:nth-child(1) { animation-delay: 0.38s; }
+  .js-motion .facts > *:nth-child(2) { animation-delay: 0.44s; }
+  .js-motion .facts > *:nth-child(3) { animation-delay: 0.50s; }
+  .js-motion .facts > *:nth-child(4) { animation-delay: 0.56s; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* Switching tabs fades the incoming panel in */
+  .tab-panel:not([hidden]) {
+    animation: panel-in 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  @keyframes panel-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .card,
+  .panel,
+  .hero-portrait,
+  .school-mark {
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                border-color 0.25s ease, background 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-soft);
+    box-shadow: 0 6px 18px rgba(28, 28, 26, 0.07);
+  }
+
+  /* Parallax owns the portrait's transform, so hover only lifts the shadow. */
+  .hero-portrait:hover {
+    box-shadow: 0 2px 4px rgba(28, 28, 26, 0.05), 0 14px 34px rgba(28, 28, 26, 0.09);
+  }
+
+  .timeline > li:hover .school-mark {
+    transform: scale(1.06);
+    border-color: var(--accent-soft);
+    background: var(--paper);
+  }
+
+  .pub-list li,
+  .plain-list li {
+    transition: color 0.2s ease;
+  }
+
+  .tab {
+    transition: color 0.2s ease, background 0.2s ease,
+                border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .tab:hover { transform: translateY(-1px); }
+  .tab[aria-selected="true"] { transform: none; }
 }
