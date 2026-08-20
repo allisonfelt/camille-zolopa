@@ -228,6 +228,33 @@ p { max-width: var(--measure); }
 a { color: var(--accent); }
 a:hover { color: var(--accent-soft); }
 
+/* Aside — light personal note */
+
+.aside {
+  max-width: var(--measure);
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--paper-alt);
+  border-radius: 3px;
+}
+
+.aside h3 {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin: 0 0 0.6rem;
+}
+
+.aside p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.section.alt .aside { background: var(--paper); }
+
 /* Timeline */
 
 .timeline {
