@@ -414,6 +414,30 @@ a:hover { color: var(--accent-soft); }
   max-width: none;
 }
 
+/* School monograms — initials rather than trademarked crests */
+
+.timeline.schools > li {
+  grid-template-columns: 8.5rem 2.5rem 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.school-mark {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  background: var(--paper-alt);
+  font-family: var(--serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--accent);
+  user-select: none;
+}
+
 /* Lists */
 
 .plain-list {
@@ -501,6 +525,19 @@ a:hover { color: var(--accent-soft); }
   .timeline > li {
     grid-template-columns: 1fr;
     gap: 0.4rem;
+  }
+  .timeline.schools > li {
+    grid-template-columns: 2.25rem 1fr;
+    gap: 0.35rem 0.9rem;
+    align-items: center;
+  }
+  .timeline.schools .timeline-date { grid-column: 1 / -1; }
+  .timeline.schools > li > div { grid-column: 2; }
+  .school-mark {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.6875rem;
+    align-self: start;
   }
   .timeline-date { padding-top: 0; }
   .lead { padding-left: 1rem; }
