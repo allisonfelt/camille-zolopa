@@ -447,7 +447,7 @@ a:hover { color: var(--accent-soft); }
   margin-top: 0.5rem;
 }
 
-.photo-wide { max-width: 22rem; margin: 0; }
+.photo-wide { max-width: 16rem; margin: 0; }
 
 .photo-inline {
   max-width: 15rem;
@@ -729,6 +729,55 @@ a:hover { color: var(--accent-soft); }
   margin-left: 0.4rem;
 }
 
+/* External links (DOIs, video) and open-access badges */
+
+a.doi {
+  display: inline;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(106, 44, 44, 0.35);
+  text-underline-offset: 3px;
+  word-break: break-word;
+  border-radius: 2px;
+  padding: 0 0.1rem;
+}
+
+/* Arrow marking the link as leaving the site; glued to the last word */
+a.doi::after {
+  content: "\2197";
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  margin-left: 0.2em;
+  transform: translateY(-0.05em);
+  text-decoration: none;
+}
+
+a.doi:hover {
+  color: #fff;
+  background: var(--accent);
+  text-decoration-color: transparent;
+}
+
+.oa {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a6b4a;
+  background: #e6ede4;
+  border-radius: 999px;
+  padding: 0.12rem 0.45rem;
+  margin-left: 0.25rem;
+  vertical-align: 0.08em;
+  white-space: nowrap;
+}
+
 /* Lists */
 
 .plain-list {
@@ -763,11 +812,7 @@ a:hover { color: var(--accent-soft); }
   color: var(--ink-faint);
 }
 
-.pub-list a {
-  word-break: break-word;
-  text-decoration-color: var(--rule);
-  text-underline-offset: 2px;
-}
+
 
 /* Grid */
 
