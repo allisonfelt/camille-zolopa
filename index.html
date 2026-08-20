@@ -15,15 +15,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="name-mark" href="#top">Camille Zolopa</a>
-    <nav class="site-nav">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#presentations">Presentations</a>
-      <a href="#clinical">Clinical</a>
-      <a href="#cv">CV</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <span class="header-role">PhD Candidate, Counselling Psychology &middot; McGill</span>
   </div>
 </header>
 
@@ -42,54 +34,104 @@
       <a class="btn" href="mailto:camille.zolopa@mail.mcgill.ca">Email</a>
       <a class="btn btn-outline" href="#publications">Publications</a>
     </div>
+
+    <dl class="facts">
+      <div>
+        <dt>Department</dt>
+        <dd>Educational &amp; Counselling Psychology, McGill</dd>
+      </div>
+      <div>
+        <dt>Supervisor</dt>
+        <dd>Dr Dennis Wendt</dd>
+      </div>
+      <div>
+        <dt>Funding</dt>
+        <dd>SSHRC Canada Graduate Scholarship</dd>
+      </div>
+      <div>
+        <dt>Publications</dt>
+        <dd>12 peer-reviewed articles</dd>
+      </div>
+    </dl>
   </section>
 
-  <section id="about" class="section wrap">
-    <h2>About</h2>
+  <div class="tabbar">
+    <div class="wrap tablist" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true" tabindex="0" data-slug="about">About</button>
+      <button class="tab" role="tab" id="tab-research" aria-controls="panel-research" aria-selected="false" tabindex="-1" data-slug="research">Research</button>
+      <button class="tab" role="tab" id="tab-publications" aria-controls="panel-publications" aria-selected="false" tabindex="-1" data-slug="publications">Publications</button>
+      <button class="tab" role="tab" id="tab-presentations" aria-controls="panel-presentations" aria-selected="false" tabindex="-1" data-slug="presentations">Presentations</button>
+      <button class="tab" role="tab" id="tab-clinical" aria-controls="panel-clinical" aria-selected="false" tabindex="-1" data-slug="clinical">Clinical</button>
+      <button class="tab" role="tab" id="tab-service" aria-controls="panel-service" aria-selected="false" tabindex="-1" data-slug="service">Service</button>
+      <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1" data-slug="contact">Contact</button>
+    </div>
+  </div>
+  <div class="tab-panel" role="tabpanel" id="panel-about" aria-labelledby="tab-about" tabindex="0">
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg><span>About</span></h2>
     <p class="lead">
       &ldquo;I am interested in mental health as public health: understanding distress
       and wellbeing across diverse populations, and working to close the health
       disparities faced by people living under structural oppression.&rdquo;
     </p>
-    <p>
-      Camille Zolopa is a PhD candidate in Counselling Psychology in the Faculty of
-      Education at McGill University, supervised by Dr Dennis Wendt. Her doctoral
-      comprehensive examination, passed with distinction, was a scoping review of
-      harm reduction practices and possibilities among Indigenous populations in
-      Australia, Canada, and the United States &mdash; a line of research she continues
-      to pursue.
-    </p>
-    <p>
-      Her path into psychology began in anthropology, which taught her to notice
-      both the pervasiveness and the specificity of cultural influence, and left her
-      with a lasting affinity for qualitative methods. What drew her onward was the
-      wish to pair the study of culture with an action orientation: to examine how a
-      person&rsquo;s cultures shape their thoughts, feelings, and health behaviors, and
-      to use that knowledge to build interventions actually suited to them. Most
-      psychological knowledge, she notes, has been generated from a narrow slice of
-      the world&rsquo;s population; cultural-clinical psychology widens the lens.
-    </p>
-    <p>
-      Before returning to McGill she completed a Master of Science in Clinical
-      Research Methodology at Fordham University and a Bachelor of Arts (Honours) in
-      Psychology with Great Distinction at Concordia University, alongside an earlier
-      Bachelor of Arts in Anthropology from McGill. Her work spans supervised
-      consumption sites, opioid policy, youth mental health during COVID-19, hepatitis
-      C care among people who inject drugs, and response-style bias in cross-cultural
-      assessment &mdash; consistently asking questions that reflect intersectional
-      identities, and consistently done in collaboration with community stakeholders
-      and knowledge users.
-    </p>
-    <p>
-      Alongside her research, Camille is completing clinical training in
-      individual psychotherapy through pre-doctoral practica in Montréal, and
-      volunteers with Projets Autochtones du Québec, a shelter serving Indigenous
-      clients in downtown Montréal.
-    </p>
-    <p>
-      She works in English and reads and speaks basic French and Spanish, and holds
-      both American and Canadian citizenship.
-    </p>
+    <div class="prose-block">
+      <h3>Where she is now</h3>
+      <p>
+        Camille Zolopa is a PhD candidate in Counselling Psychology in the Faculty
+        of Education at McGill University, supervised by Dr Dennis Wendt.
+      </p>
+      <p>
+        Her doctoral comprehensive examination &mdash; passed with distinction &mdash;
+        was a scoping review of harm reduction practices among Indigenous populations
+        in Australia, Canada, and the United States. It remains the line of research
+        she is pursuing.
+      </p>
+    </div>
+
+    <div class="prose-block">
+      <h3>How she got here</h3>
+      <p>
+        Her path into psychology began in anthropology, which taught her to notice
+        both the pervasiveness and the specificity of cultural influence &mdash; and
+        left her with a lasting affinity for qualitative methods.
+      </p>
+      <p>
+        What drew her onward was the wish to pair the study of culture with an action
+        orientation: to examine how a person&rsquo;s cultures shape their thoughts,
+        feelings, and health behaviors, and to use that knowledge to build
+        interventions actually suited to them.
+      </p>
+      <p>
+        Most psychological knowledge, she notes, has been generated from a narrow
+        slice of the world&rsquo;s population. Cultural-clinical psychology widens
+        the lens.
+      </p>
+    </div>
+
+    <div class="prose-block">
+      <h3>Research and practice, together</h3>
+      <p>
+        Before returning to McGill she completed an MSc in Clinical Research
+        Methodology at Fordham and a BA (Honours) in Psychology at Concordia,
+        alongside an earlier BA in Anthropology from McGill.
+      </p>
+      <p>
+        Her published work spans supervised consumption sites, opioid policy, youth
+        mental health during COVID-19, hepatitis C care among people who inject
+        drugs, and response-style bias in cross-cultural assessment &mdash;
+        consistently done in collaboration with community stakeholders and knowledge
+        users.
+      </p>
+      <p>
+        Alongside the research, she is completing clinical training in individual
+        psychotherapy through pre-doctoral practica in Montréal, and volunteers with
+        Projets Autochtones du Québec, a shelter serving Indigenous clients downtown.
+      </p>
+      <p>
+        She works in English, reads and speaks basic French and Spanish, and holds
+        both American and Canadian citizenship.
+      </p>
+    </div>
 
     <div class="aside">
       <h3>Off the clock</h3>
@@ -99,10 +141,9 @@
         person a cat named Memphis has generously agreed to live with.
       </p>
     </div>
-  </section>
-
-  <section class="section wrap alt">
-    <h2>Education</h2>
+    </section>
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 22 9l-10 5L2 9l10-5Z"/><path d="M6 11.2V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.8"/></svg><span>Education</span></h2>
     <ul class="timeline">
       <li>
         <span class="timeline-date">2023&ndash;</span>
@@ -135,10 +176,12 @@
         </div>
       </li>
     </ul>
-  </section>
+    </section>
+  </div>
 
-  <section id="research" class="section wrap">
-    <h2>Research</h2>
+  <div class="tab-panel" role="tabpanel" id="panel-research" aria-labelledby="tab-research" tabindex="0" hidden>
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg><span>Research</span></h2>
     <p class="lead">
       Her dissertation investigates drug use harm reduction and service use among
       Indigenous people living in Montréal &mdash; work grounded in holistic and
@@ -148,16 +191,35 @@
     <p>
       More broadly, Camille&rsquo;s research centers on harm reduction and substance use,
       with a particular focus on the wellbeing of Indigenous populations and other
-      underserved communities. Recent and ongoing work includes:
+      underserved communities.
     </p>
-    <ul class="plain-list">
-      <li>Harm reduction practices and possibilities among Indigenous populations in Australia, Canada, and the United States</li>
-      <li>Supervised consumption and injection site use, overdose intervention, and Canada&rsquo;s safer opioid supply research agenda</li>
-      <li>Youth mental health, wellbeing, and substance use during the COVID-19 pandemic</li>
-      <li>Sex and gender differences in hepatitis C virus risk and care among people who inject drugs</li>
-      <li>Extreme response style and cross-cultural bias in psychological assessment among Latinx populations</li>
-      <li>Aging among people who use illicit opioids, cocaine, or methamphetamine</li>
-    </ul>
+
+    <div class="cards">
+      <article class="card">
+        <h4>Indigenous harm reduction</h4>
+        <p>Practices and possibilities across Australia, Canada, and the United States, and recovery and follow-up after substance use treatment.</p>
+      </article>
+      <article class="card">
+        <h4>Supervised consumption</h4>
+        <p>Site use, client characteristics, and overdose intervention in Montréal &mdash; alongside Canada&rsquo;s safer opioid supply research agenda.</p>
+      </article>
+      <article class="card">
+        <h4>Youth mental health</h4>
+        <p>Wellbeing, psychological distress, and substance use among young people during the COVID-19 pandemic.</p>
+      </article>
+      <article class="card">
+        <h4>Hepatitis C care</h4>
+        <p>Sex and gender differences in risk, prevention, and the cascade of care among people who inject drugs.</p>
+      </article>
+      <article class="card">
+        <h4>Cross-cultural assessment</h4>
+        <p>Extreme response style and measurement bias among Latinx populations, and what it means for diagnosis.</p>
+      </article>
+      <article class="card">
+        <h4>Aging and drug use</h4>
+        <p>Health and harms among older people who use illicit opioids, cocaine, or methamphetamine.</p>
+      </article>
+    </div>
 
     <h3>Awards &amp; Honors</h3>
     <ul class="timeline compact">
@@ -190,10 +252,12 @@
         </div>
       </li>
     </ul>
-  </section>
+    </section>
+  </div>
 
-  <section id="publications" class="section wrap alt">
-    <h2>Publications</h2>
+  <div class="tab-panel" role="tabpanel" id="panel-publications" aria-labelledby="tab-publications" tabindex="0" hidden>
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h7M9 16h7"/></svg><span>Publications</span></h2>
 
     <h3>Peer-reviewed journal articles</h3>
     <ol class="pub-list">
@@ -216,10 +280,12 @@
       <li>Wendt, D.C., Larney, S., Burack, J.A., O&rsquo;Connor, R.M., <strong>Zolopa, C.</strong>, Corran, C., Lai, J., Bomfim, E., DeGrace, S., &amp; Dumont, J. (2021). <em>Preliminary report: Rapid review of changes in youth mental health, psychological wellbeing, and substance use during the COVID-19 pandemic.</em> Report submitted to CIHR/Health Canada.</li>
       <li>Larney, S., Bruneau, J., Raynault, M.F., Meeson, J.S., H&oslash;j, S., Minoyan, N., <strong>Zolopa, C.</strong>, &amp; Makarenko, I. (2020). <em>Preliminary report: Rapid review of the impacts of &ldquo;Big Events&rdquo; on people who use drugs and delivery of harm reduction and drug treatment services: Implications for strengthening systems in response to COVID-19.</em> Report submitted to CIHR/Health Canada.</li>
     </ol>
-  </section>
+    </section>
+  </div>
 
-  <section id="presentations" class="section wrap">
-    <h2>Presentations</h2>
+  <div class="tab-panel" role="tabpanel" id="panel-presentations" aria-labelledby="tab-presentations" tabindex="0" hidden>
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18v11H3z"/><path d="M12 15v5"/><path d="M8 20h8"/></svg><span>Presentations</span></h2>
 
     <h3>Oral presentations</h3>
     <ul class="plain-list">
@@ -241,10 +307,12 @@
       <li>(2020) Context Influences People&rsquo;s Perceptions of a Downward Gaze, Downturned Head Display. 32nd Association for Psychological Science Annual Convention, Chicago, IL.</li>
       <li>(2020) Differentiating Between Authentic and Hubristic Pride: The Contribution of Display Speed. 81st Canadian Psychological Association Annual National Convention, Montr&eacute;al, QC.</li>
     </ul>
-  </section>
+    </section>
+  </div>
 
-  <section id="clinical" class="section wrap alt">
-    <h2>Clinical Experience</h2>
+  <div class="tab-panel" role="tabpanel" id="panel-clinical" aria-labelledby="tab-clinical" tabindex="0" hidden>
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.3A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.7C19 15.6 12 20 12 20Z"/></svg><span>Clinical Experience</span></h2>
     <p class="lead">
       Camille tends toward humanistic and emotion-focused approaches to therapy,
       with training in cognitive-behavioral, acceptance and commitment, and
@@ -279,10 +347,12 @@
       <li>How Attachment, Trauma &amp; Temperament Shape Personality &mdash; Daniel J. Siegel, MD (2025)</li>
       <li>The Body Keeps the Score: Trauma Healing Through the Senses &mdash; Bessel van der Kolk, MD (2024)</li>
     </ul>
-  </section>
+    </section>
+  </div>
 
-  <section id="service" class="section wrap">
-    <h2>Service &amp; Community</h2>
+  <div class="tab-panel" role="tabpanel" id="panel-service" aria-labelledby="tab-service" tabindex="0" hidden>
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="2.8"/><circle cx="16.5" cy="10.5" r="2.3"/><path d="M2.5 19a5.8 5.8 0 0 1 11 0"/><path d="M15 15.4a5 5 0 0 1 6.5 3.6"/></svg><span>Service &amp; Community</span></h2>
     <div class="grid-2">
       <div>
         <h3>Peer Review</h3>
@@ -304,10 +374,12 @@
         </ul>
       </div>
     </div>
-  </section>
+    </section>
+  </div>
 
-  <section id="cv" class="section wrap alt cv-cta">
-    <h2>Curriculum Vitae</h2>
+  <div class="tab-panel" role="tabpanel" id="panel-contact" aria-labelledby="tab-contact" tabindex="0" hidden>
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18H6z"/><path d="M9.5 8h5M9.5 12h5M9.5 16h3"/></svg><span>Curriculum Vitae</span></h2>
     <p>For a full record of publications, presentations, training, and service, see the complete CV.</p>
     <!--
       To enable this link, add a web-safe PDF named Camille_Zolopa_CV.pdf to the
@@ -316,15 +388,15 @@
       first — anything in this file is publicly downloadable.
     -->
     <!-- <div><a class="btn" href="Camille_Zolopa_CV.pdf">Download CV (PDF)</a></div> -->
-  </section>
-
-  <section id="contact" class="section wrap">
-    <h2>Contact</h2>
+    </section>
+    <section class="section wrap">
+    <h2><svg class="sec-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg><span>Contact</span></h2>
     <p>
       <strong>Email:</strong> <a href="mailto:camille.zolopa@mail.mcgill.ca">camille.zolopa@mail.mcgill.ca</a><br>
       <strong>Affiliation:</strong> Department of Educational &amp; Counselling Psychology, Faculty of Education, McGill University, Montr&eacute;al, Canada
     </p>
-  </section>
+    </section>
+  </div>
 
 </main>
 
@@ -336,6 +408,57 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+    if (!tabs.length) return;
+
+    // Panels are visible by default so the page still works without JS.
+    document.body.classList.add('has-tabs');
+
+    function show(slug, focusTab) {
+      tabs.forEach(function (tab) {
+        var on = tab.dataset.slug === slug;
+        tab.setAttribute('aria-selected', on ? 'true' : 'false');
+        tab.tabIndex = on ? 0 : -1;
+        var panel = document.getElementById('panel-' + tab.dataset.slug);
+        if (panel) panel.hidden = !on;
+        if (on && focusTab) tab.focus();
+      });
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        show(tab.dataset.slug);
+        history.replaceState(null, '', '#' + tab.dataset.slug);
+        // If the reader has scrolled past the tab bar, bring it back into view
+        // rather than jumping to the top and replaying the whole hero.
+        var bar = document.querySelector('.tabbar');
+        if (bar.getBoundingClientRect().top < 0) {
+          bar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Left/right arrows move between tabs, home/end jump to the ends.
+    document.querySelector('.tablist').addEventListener('keydown', function (e) {
+      var i = tabs.findIndex(function (t) { return t.getAttribute('aria-selected') === 'true'; });
+      var next = null;
+      if (e.key === 'ArrowRight') next = (i + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = tabs.length - 1;
+      if (next === null) return;
+      e.preventDefault();
+      show(tabs[next].dataset.slug, true);
+      history.replaceState(null, '', '#' + tabs[next].dataset.slug);
+    });
+
+    // Open the tab named in the URL, so links like /#publications still work.
+    var initial = location.hash.replace('#', '');
+    if (initial && document.getElementById('panel-' + initial)) show(initial);
+    else show(tabs[0].dataset.slug);
+  })();
 </script>
 
 </body>
